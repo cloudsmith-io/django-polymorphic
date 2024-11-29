@@ -6,7 +6,7 @@ This code and affiliated files are (C) by Bert Constantin and individual contrib
 Please see LICENSE and AUTHORS for more information.
 """
 
-VERSION = "4.0.0a"
+VERSION = "4.0.0a.post1+cloudsmith"
 
 # version synonym for backwards compatibility
 __version__ = VERSION

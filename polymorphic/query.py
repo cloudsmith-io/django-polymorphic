@@ -455,8 +455,8 @@ class PolymorphicQuerySet(QuerySet):
 
                 if self.query.annotations:
                     for anno_field_name in self.query.annotations.keys():
-                        attr = getattr(base_object, anno_field_name)
-                        setattr(real_object, anno_field_name, attr)
+                        if attr := getattr(base_object, anno_field_name, None):
+                            setattr(real_object, anno_field_name, attr)
 
                 if self.query.extra_select:
                     for select_field_name in self.query.extra_select.keys():
